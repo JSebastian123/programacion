@@ -1,0 +1,123 @@
+ System.out.println(
+                "Eligue CARA o CRUZ\n --Solo eligue cara o cruz tal cual esta escrito estoy hecho con booleanos");
+        String turno = sc.nextLine();
+        if (turno.equals("CARA")) {
+            FlipCoin();
+        }
+        if (turno.equals("CRUZ")) {
+            FlipCoin();
+        }
+
+        for (int i = 0; i <= 3; i++) {
+            // para que el jugador gane tiene que elegir la opcion correcta es decir
+            // daremos 4 opciones y la IA usara 4 y estas tiene que tener un igual o una
+            // respuesta
+            // si son iguales que gane el que empiece la ronda
+            // si son difs como hacer para que un insulto sea superior a otro
+            // lo hare por orden de lista
+            // cada ronda se tienen que intercambiar los jugadores
+            // cada ronda se flip un coin para cambiar de jugador ronda por ronda
+            // Hare qe lo que te dija la IA se muestre la izquierda y lo del jugador a la
+            // derecha
+
+            // necesito un if para elegir quien va primero
+            if (turno.equals("CARA")) {
+                if (i == 1) {
+                    try {
+                        System.out.println("1" + Opc1Ins);
+                        System.out.println("2" + Opc2Ins);
+                        System.out.println("3" + Opc3Ins);
+                        System.out.println("4" + Opc4Ins);
+                        contestacion = sc.nextLine();
+                        System.out.println(Opc1Cons + "1");
+                        System.out.println(Opc2Cons + "2");
+                        System.out.println(Opc3Cons + "3");
+                        System.out.println(Opc4Cons + "4");
+                    } catch (Exception e) {
+                        System.out.println("Tienes que poner texto papa no numeros");
+                    }
+
+                }
+            }
+            if (turno.equals("CRUZ")) {
+                if (i == 1) {
+                    try {
+                        System.out.println(Opc1Cons + "1");
+                        System.out.println(Opc2Cons + "2");
+                        System.out.println(Opc3Cons + "3");
+                        System.out.println(Opc4Cons + "4");
+
+                        System.out.println("1" + Opc1Ins);
+                        System.out.println("2" + Opc2Ins);
+                        System.out.println("3" + Opc3Ins);
+                        System.out.println("4" + Opc4Ins);
+                        diselo = sc.nextLine();
+                    } catch (Exception e) {
+                        System.out.println("Tienes que poner texto papa no numeros");
+                    }
+
+                } else {
+                }
+                // ahora aqui quien fue primero ira segundo
+                if (i == 2) {
+                    try {
+
+                    } catch (Exception e) {
+                        System.out.println("Tienes que poner texto papa no numeros");
+                    }
+
+                }
+                // quien fue segundo ira primero ahora
+                if (i == 3) {
+
+                    try {
+                        System.out.println(Opc1Cons + "1");
+                        System.out.println(Opc2Cons + "2");
+                        System.out.println(Opc3Cons + "3");
+                        System.out.println(Opc4Cons + "4");
+
+                        System.out.println("1" + Opc1Ins);
+                        System.out.println("2" + Opc2Ins);
+                        System.out.println("3" + Opc3Ins);
+                        System.out.println("4" + Opc4Ins);
+                    } catch (Exception e) {
+                        System.out.println("Tienes que poner texto papa no numeros");
+                    }
+
+                }
+            }
+        }
+        if (RondasGanadasJ1 > RondasGanadasJIA) {
+            System.out.println(
+                    "FIN DE JUEGO GRUMETE EL GANADOR ES EL JUGADOR 1\nEL ROBOTILLO ESE ES COMIDA PARA LOS PECES");
+        }
+        if (RondasGanadasJ1 < RondasGanadasJIA) {
+            System.out.println(
+                    "FIN DE JUEGO GRUMETE EL GANADOR ES EL JUGADOR IA \nEL JUGADOR DE PACOTILLA ESE ES COMIDA PARA LOS PECES");
+        }
+        if (RondasGanadasJ1 == RondasGanadasJIA) {
+            System.out.println(
+                    "EMPATE DE RENACUAJOS");
+        }
+    }
+
+}if(RondasGanadasJ1>RondasGanadasJIA){System.out.println("FIN DE JUEGO GRUMETE EL GANADOR ES EL JUGADOR 1\nEL ROBOTILLO ESE ES COMIDA PARA LOS PECES");}if(RondasGanadasJ1<RondasGanadasJIA){System.out.println("FIN DE JUEGO GRUMETE EL GANADOR ES EL JUGADOR IA \nEL JUGADOR DE PACOTILLA ESE ES COMIDA PARA LOS PECES");}if(RondasGanadasJ1==RondasGanadasJIA){System.out.println("EMPATE DE RENACUAJOS");}}
+
+}
+    // } else {
+    // System.out.println(
+    // "AQUI NO HAY SITIO PARA GRUMETES INSEGURO VUELVE A CORREER EL PROGRAMA SI
+    // QUIERES\nOTRO INTENTO");
+    // }
+    // }
+
+    public static boolean FlipCoin() {
+        if (Math.random() < 0.5) {
+            System.out.println("Cara");
+            return true;
+        } else {
+            System.out.println("Cruz");
+            return false;
+        }
+    }
+}
